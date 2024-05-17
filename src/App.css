@@ -1,0 +1,237 @@
+body {
+  background-color: hsl(148, 38%, 91%);
+  font-family: "Karla", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: hsl(187, 24%, 22%);
+  padding: 1em;
+}
+
+.main-container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  width: 50vw;
+  height: 70%;
+  padding: 3em;
+  border-radius: .5em;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="radio"]:focus,
+textarea:focus {
+  outline: 1px solid rgb(70, 179, 70);
+}
+
+
+.contact-us {
+  color: hsl(187, 24%, 22%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.name-section,
+.email-section,
+.query-section,
+.message-section,
+.checkbox-section {
+  margin-bottom: 1em;
+}
+
+.name-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-section label {
+  width: 48%;
+}
+
+#FirstName,
+#LastName,
+#email,
+#Message {
+  cursor: pointer;
+  width: calc(100% - 2 * 1em);
+  /* Calculate width minus padding */
+  padding: 0.7em;
+  margin-top: 0.5em;
+  border: 1px solid gray;
+  border-radius: .5em;
+  /* outline: none; */
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  /* Ensure padding is included in the width */
+}
+
+.email-section,
+.query-section,
+.message-section,
+.checkbox-section {
+  color: hsl(187, 24%, 22%);
+}
+
+.star-mark {
+  color: hsl(169, 82%, 27%);
+  font-weight: bold;
+}
+
+.query-option {
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: .5em;
+  padding: .5em;
+  width: calc(100% - 2 * 1em);
+  /* Calculate width minus padding */
+  margin-top: 0.5em;
+  display: flex;
+  box-sizing: border-box;
+  /* Ensure padding is included in the width */
+}
+
+.query-option::before {
+  background-color: white;
+}
+
+
+.query-option::after {
+  background-color: aquamarine;
+}
+
+.query-section input[type="radio"] {
+  margin-right: 1em;
+}
+
+.query-section {
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+.between-query-section {
+  display: flex;
+  flex-direction: column;
+  /* Stack query options vertically */
+}
+
+#query-type-general,
+#query-type-support {
+  appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid gray;
+  transition: background-color 700ms;
+  cursor: pointer;
+}
+
+#query-type-general:checked,
+#query-type-support:checked {
+  background-color: hsl(169, 82%, 27%);
+}
+
+.checkbox-section {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-section input[type="checkbox"] {
+  margin-right: 1em;
+}
+
+.checkbox-section input[type="checkbox"]:checked {
+  background-color: hsl(169, 82%, 27%);
+}
+
+.checkbox-section label {
+  margin-left: 0.5em;
+}
+
+.btn {
+  width: 100%;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: .5em;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: hsl(170, 51%, 37%);
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    width: 90vw;
+    /* Full width on mobile */
+    padding: 1em;
+    /* Reduce padding on mobile to show background color */
+    margin: 1em;
+    /* Add margin to avoid touching screen edges */
+  }
+
+  .name-section {
+    flex-direction: column;
+  }
+
+  .name-section label {
+    width: 100%;
+    margin-bottom: 1em;
+    /* Add space between FirstName and LastName fields */
+  }
+
+  #FirstName,
+  #LastName,
+  #email,
+  #Message {
+    width: calc(100% - 2 * 1em);
+    /* Calculate width minus padding */
+    padding: 0.7em;
+    margin-top: 0.5em;
+    border: 1px solid gray;
+    border-radius: .5em;
+    outline: none;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+  }
+
+  .query-option {
+    width: calc(100% - 2 * 0.5em);
+    /* Calculate width minus padding */
+    margin-right: 0;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: .5em;
+    padding: .5em;
+    display: flex;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+  }
+
+  .between-query-section {
+    flex-direction: column;
+    /* Stack query options vertically */
+  }
+
+  body {
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbar */
+  }
+}
